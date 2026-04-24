@@ -1,10 +1,11 @@
-require('dotenv').config();
-const express = require('express');
-const cors = require('cors');
-const gplay = require('google-play-scraper');
-const appStore = require('app-store-scraper');
-const axios = require('axios');
-const { jsonrepair } = require('jsonrepair');
+import dotenv from 'dotenv';
+dotenv.config();
+import express from 'express';
+import cors from 'cors';
+import gplay from 'google-play-scraper';
+import appStore from 'app-store-scraper';
+import axios from 'axios';
+import { jsonrepair } from 'jsonrepair';
 
 const OPENROUTER_KEY = process.env.OPENROUTER_API_KEY;
 
@@ -108,7 +109,7 @@ Return this exact JSON structure:
       headers: {
         'Authorization': `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
-        'HTTP-Referer': 'http://localhost:5174',
+        'HTTP-Referer': 'https://product-feedback-agent.vercel.app',
         'X-Title': 'FeedbackAgent'
       }
     });
@@ -182,4 +183,4 @@ if (process.env.NODE_ENV !== 'production' && !process.env.VERCEL) {
   app.listen(3001, () => console.log('✅ Server running on http://localhost:3001'));
 }
 
-module.exports = app;
+export default app;

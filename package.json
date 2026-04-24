@@ -9,8 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "app-store-scraper": "^0.18.0",
+    "axios": "^1.15.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "framer-motion": "^12.38.0",
+    "google-play-scraper": "^10.1.2",
     "html2pdf.js": "^0.14.0",
+    "jsonrepair": "^3.14.0",
     "lucide-react": "^0.344.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
